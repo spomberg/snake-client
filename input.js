@@ -12,10 +12,12 @@ const setupInput = function (conn) {
 };
 
 const handleUserInput = function (data) {
+  //TERMINATES CONNECTION
   if (data === '\u0003') {
     console.log("Connection terminated!");
     process.exit();
   }
+  //COMMANDS
   if (data === 'w') {
     connection.write("Move: up");
   }
@@ -27,6 +29,16 @@ const handleUserInput = function (data) {
   }
   if (data === 'd') {
     connection.write("Move: right");
+  }
+  //MESSAGES
+  if (data === '1') {
+    connection.write("Say: Go, Snake!");
+  }
+  if (data === '2') {
+    connection.write("Say: SSSSSSS!");
+  }
+  if (data === '3') {
+    connection.write("Say: Snake! I choose you!");
   }
 };
 
