@@ -14,6 +14,7 @@ const setupInput = function(conn) {
 };
 
 const handleUserInput = function(data) {
+  //Command strings (WASD + canned messages) are stored in an object on constants.js
   if (commands[data]) connection.write(commands[data]);
   
   //TERMINATES CONNECTION

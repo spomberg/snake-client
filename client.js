@@ -13,7 +13,7 @@ const connect = function() {
 
   conn.on('connect', () => {
     console.log("Connection established!");
-    conn.write("Name: MPS");
+    conn.write("Name: MS");
   });
 
   conn.on('data', (data) => {
